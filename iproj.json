@@ -2,7 +2,7 @@
     "description": "Arcad Demo",
     "version": "0.0.1",
     "includePath": [
-        "MMO2_SRC/QPROTOSRC"
+        "MMO2_SRC/QPROTOSRC" 
     ],
     "repository": "git@github.com:bmarolleau/MMO2.git",
     "objlib": "&L01",
