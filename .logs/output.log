@@ -1,0 +1,4 @@
+11:56:59.509 [INFO] Connecting locally to instance AD/ENG.
+11:57:00.513 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.00 with CCSID 37
+11:57:01.052 [INFO] Starting project synchronization
+11:57:04.653 [ERROR] Command 'compile' failed: com.arcadsoftware.elias.commons.exceptions.EliasLinkedVersionNotFoundException: Linked version of application MMO2 not found for branch main

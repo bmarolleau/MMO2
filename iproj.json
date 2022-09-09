@@ -1,15 +1,20 @@
 {
-    "description": "Arcad Demo",
-    "version": "0.0.1",
-    "includePath": [
-        "MMO2_SRC/QPROTOSRC" 
-    ],
-    "repository": "git@github.com:bmarolleau/MMO2.git",
-    "objlib": "&L01",
-    "curlib": "*CRTDFT",
-    "extensions": {
-        "arcad": {
-            "libraryPrefix": "MO2"
-        }
+  "description": "Arcad Demo",
+  "version": "0.0.1",
+  "includePath": [
+    "MMO2_SRC/QPROTOSRC"
+  ],
+  "repository": "git@github.com:bmarolleau/MMO2.git",
+  "objlib": "&verlibmmo2",
+  "curlib": "*CRTDFT",
+  "extensions": {
+    "arcad": {
+      "libraryPrefix": "MO2",
+      "code": "MMO2",
+      "iasp": "",
+      "validated": true
     }
+  },
+  "buildCommand": "elias compile {branch}",
+  "compileCommand": "elias compile {branch} -f {filename}"
 }
