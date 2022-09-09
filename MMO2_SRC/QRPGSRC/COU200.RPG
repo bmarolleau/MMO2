@@ -5,7 +5,7 @@
      F                                        RRN01 KSFILE SFL01
       *
      FCOUNTRY UF  E           K        DISK
-      * SCREEN INFORMATION DS.
+      * SCREEN INFORMATION DS..
      IINFDS       DS
      I                                    B 378 3790LRRN
       *

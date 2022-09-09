@@ -1,7 +1,7 @@
-17:38:49.737 [INFO] Connecting locally to instance AD/ENG.
-17:38:50.795 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.00 with CCSID 37
-17:38:51.345 [INFO] Starting project synchronization
-17:38:52.170 [INFO] Configuration summary:
+18:58:43.832 [INFO] Connecting locally to instance AD/ENG.
+18:58:44.845 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.00 with CCSID 37
+18:58:45.328 [INFO] Starting project synchronization
+18:58:46.106 [INFO] Configuration summary:
 	- Repository: git@github.com:bmarolleau/MMO2.git
 	- Branch: feature/feat1
 	- Application: MMO2
@@ -10,27 +10,27 @@
 	- Target version: MMO2 DEV SB.00.01
 	- Hash comparison: MD5
 	- Synchronization type: SANDBOX
-17:38:52.171 [INFO] Preparing transfer operations
-17:38:52.641 [INFO] Created 11 transfer operation(s)
-17:38:52.774 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
-17:38:52.776 [INFO] Transferring 1 member(s) to file QRPGLESRC; 36 skipped
-17:38:54.099 [INFO] Transfer to file QRPGLESRC complete
-17:38:54.101 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
-17:38:54.101 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
-17:38:54.102 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
-17:38:54.102 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
-17:38:54.102 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
-17:38:54.103 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
-17:38:54.103 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
-17:38:54.103 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
-17:38:54.104 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
-17:38:54.271 [INFO] Exported transfers list to /ArcADSCM/MMO2/SB.00.01/transfersList.json
-17:38:54.272 [INFO] Duration: 2 second(s)
-17:38:54.306 [INFO] Running unitary compilation for 1 component(s)
-17:38:54.762 [INFO] Created Smart Compiler list MO2SB0001/SMARTCPL with 1 component(s) to compile:
-	- FAM301 (RPGLE/*RPGMOD)
-17:38:55.566 [INFO] Waiting for compilations to end...
-17:38:56.470 [INFO] 0 component(s) successfully compiled
-17:38:56.471 [INFO] Writing compilation logs
-17:38:56.482 [INFO] Writing 1 spooled file(s)
-17:38:56.512 [INFO] Writing 0 event file(s)
+18:58:46.106 [INFO] Preparing transfer operations
+18:58:46.673 [INFO] Created 11 transfer operation(s)
+18:58:46.810 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
+18:58:46.810 [INFO] Nothing to transfer to QRPGLESRC; all transfers were skipped.
+18:58:46.812 [INFO] Transferring 1 member(s) to file QRPGSRC; 0 skipped
+18:58:48.158 [INFO] Transfer to file QRPGSRC complete
+18:58:48.160 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
+18:58:48.160 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
+18:58:48.161 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
+18:58:48.161 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
+18:58:48.162 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
+18:58:48.162 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
+18:58:48.162 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
+18:58:48.163 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
+18:58:48.316 [INFO] Exported transfers list to /ArcADSCM/MMO2/SB.00.01/transfersList.json
+18:58:48.317 [INFO] Duration: 2 second(s)
+18:58:48.345 [INFO] Running unitary compilation for 1 component(s)
+18:58:48.819 [INFO] Created Smart Compiler list MO2SB0001/SMARTCPL with 1 component(s) to compile:
+	- COU200 (RPG/*RPG)
+18:58:49.612 [INFO] Waiting for compilations to end...
+18:58:50.553 [INFO] 0 component(s) successfully compiled
+18:58:50.554 [INFO] Writing compilation logs
+18:58:50.565 [INFO] Writing 1 spooled file(s)
+18:58:50.592 [INFO] Writing 0 event file(s)
