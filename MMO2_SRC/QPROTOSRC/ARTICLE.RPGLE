@@ -2,7 +2,7 @@
       * %TEXT Function Article                                        *
       *%EMETADATA                                                     *
       *=============================================
-      * Get ARTICLE DESCRPTION
+      * Get ARTICLE DESCRPTION test
       *=============================================
      DGetArtDesc       PR            50A
      D ARID                           6A    value

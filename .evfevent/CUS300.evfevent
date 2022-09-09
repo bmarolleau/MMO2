@@ -1,0 +1,41 @@
+TIMESTAMP  0 20220909163611
+PROCESSOR  0 000 1
+FILEID     0 001 000000 049 /home/BENOIT/MMO2/MMO2_SRC/QRPGLESRC/CUS300.RPGLE 20170510055520 0
+ERROR      0 001 1 000005 000005 013 000005 079 RNF0273 T 40 072 Compiler not able to open the /COPY or /INCLUDE file; directive ignored.
+ERROR      0 001 1 000003 000003 007 000003 014 RNF2120 T 40 067 External descriptions for file CUSTOME1 not found; file is ignored.
+ERROR      0 001 1 000097 000097 050 000097 055 RNF7030 S 30 044 The name or indicator CUCITY is not defined.
+ERROR      0 001 1 000107 000107 050 000107 055 RNF7030 S 30 044 The name or indicator CUCOUN is not defined.
+ERROR      0 001 1 000127 000127 050 000127 057 RNF7030 S 30 046 The name or indicator CUCREDIT is not defined.
+ERROR      0 001 1 000155 000155 038 000155 042 RNF7030 S 30 043 The name or indicator CUDEL is not defined.
+ERROR      0 001 1 000010 000010 049 000010 052 RNF7030 S 30 042 The name or indicator CUID is not defined.
+ERROR      0 001 1 000117 000117 050 000117 057 RNF7030 S 30 046 The name or indicator CULIMCRE is not defined.
+ERROR      0 001 1 000057 000057 050 000057 056 RNF7030 S 30 045 The name or indicator CULINE1 is not defined.
+ERROR      0 001 1 000067 000067 050 000067 056 RNF7030 S 30 045 The name or indicator CULINE2 is not defined.
+ERROR      0 001 1 000077 000077 050 000077 056 RNF7030 S 30 045 The name or indicator CULINE3 is not defined.
+ERROR      0 001 1 000047 000047 050 000047 055 RNF7030 S 30 044 The name or indicator CUMAIL is not defined.
+ERROR      0 001 1 000027 000027 050 000027 056 RNF7030 S 30 045 The name or indicator CUPHONE is not defined.
+ERROR      0 001 1 000017 000017 050 000017 055 RNF7030 S 30 044 The name or indicator CUSTNM is not defined.
+ERROR      0 001 1 000037 000037 050 000037 054 RNF7030 S 30 043 The name or indicator CUVAT is not defined.
+ERROR      0 001 1 000087 000087 050 000087 054 RNF7030 S 30 043 The name or indicator CUZIP is not defined.
+ERROR      0 001 1 000179 000179 023 000179 027 RNF7030 S 30 043 The name or indicator FCUST is not defined.
+ERROR      0 001 1 000010 000010 008 000010 013 RNF7030 S 30 044 The name or indicator K_CUID is not defined.
+ERROR      0 001 1 000155 000155 038 000155 042 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000166 000166 017 000166 021 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000177 000177 023 000177 026 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000178 000178 012 000178 017 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000179 000179 023 000179 027 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000180 000180 021 000180 028 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 0 000000 000000 000 000000 000 RNS9308 T 50 057 Compilation stopped. Severity 40 errors found in program.
+FILEEND    0 001 000194
+ERROR      0 001 1 000000 000000 000 000000 000 MSG3666 I 01 044 *** Messages sent by the Compilation job ***
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2796 I 01 058 Compilation of CUS300 (RPGLE) in version MMO2 DEV SB.00.01
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2699 S 31 062 No object CUS300, of type *MODULE has been found in the *LIBL.
+ERROR      0 001 1 000000 000000 000 000000 000 CPC2192 I 01 058 Object CUS300 in MO2SB0001 type *MODULE renamed I9RGI8FX7.
+ERROR      0 001 1 000000 000000 000 000000 000 CPC2193 I 01 069 Object I9RGI8FX7 in MO2SB0001 type *MODULE moved to library ARRPLOBJ.
+ERROR      0 001 1 000000 000000 000 000000 000 CPC2191 I 01 050 Object I9RGI8FX7 in ARRPLOBJ type *DTAARA deleted.
+ERROR      0 001 1 000000 000000 000 000000 000 CPD4090 W 11 079 Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+ERROR      0 001 1 000000 000000 000 000000 000 MSG1573 I 01 040 *** Messages sent by the Compilation ***
+ERROR      0 001 1 000000 000000 000 000000 000 CPF4102 T 41 063 File QPROTOSRC in library *LIBL with member CUSTOMER not found.
+ERROR      0 001 1 000000 000000 000 000000 000 RNS9308 T 51 057 Compilation stopped. Severity 40 errors found in program.
+ERROR      0 001 1 000000 000000 000 000000 000 RNS9309 T 51 067 Compilation failed. Module CUS300 not created in library MO2SB0001.
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2235 T 41 045 * Object MO2SB0001/CUS300 compilation failure
