@@ -1,6 +1,6 @@
       *%METADATA                                                                          *
       * %TEXT Function Select an article                                                  *
-      *%EMETADATA                                                                         *
+      *%EMETADATA                                                                          *
      h nomain
 
      Fart301d   CF   E             WORKSTN
