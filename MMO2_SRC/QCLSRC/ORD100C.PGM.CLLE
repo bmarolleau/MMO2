@@ -1,6 +1,6 @@
       /*%METADATA                                                     */
-      /* %TEXT Create new order with parameter                        */
-      /*%EMETADATA                                                    */
+      /* %TEXT Create new order with parameter TEST                       */
+      /*%EMETADATA                                                     */
              PGM        PARM(&CUID)
              DCL        VAR(&CUID) TYPE(*DEC) LEN(5 0)
              DLTF       FILE(QTEMP/DETORD)

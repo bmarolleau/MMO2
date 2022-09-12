@@ -1,36 +1,137 @@
-18:58:43.832 [INFO] Connecting locally to instance AD/ENG.
-18:58:44.845 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.00 with CCSID 37
-18:58:45.328 [INFO] Starting project synchronization
-18:58:46.106 [INFO] Configuration summary:
+14:03:08.563 [INFO] Connecting locally to instance AD/ENG.
+14:03:09.581 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.00 with CCSID 37
+14:03:10.074 [INFO] Starting project synchronization
+14:03:10.936 [INFO] Configuration summary:
 	- Repository: git@github.com:bmarolleau/MMO2.git
 	- Branch: feature/feat1
 	- Application: MMO2
-	- Project IFS directory: /home/BENOIT/MMO2
-	- Target IFS directory: /ArcADSCM/MMO2/SB.00.01
-	- Target version: MMO2 DEV SB.00.01
+	- Project IFS directory: /home/ARCAD_PGMR/MMO2
+	- Target IFS directory: /ArcADSCM/MMO2/SB.00.02
+	- Target version: MMO2 DEV SB.00.02
 	- Hash comparison: MD5
 	- Synchronization type: SANDBOX
-18:58:46.106 [INFO] Preparing transfer operations
-18:58:46.673 [INFO] Created 11 transfer operation(s)
-18:58:46.810 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
-18:58:46.810 [INFO] Nothing to transfer to QRPGLESRC; all transfers were skipped.
-18:58:46.812 [INFO] Transferring 1 member(s) to file QRPGSRC; 0 skipped
-18:58:48.158 [INFO] Transfer to file QRPGSRC complete
-18:58:48.160 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
-18:58:48.160 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
-18:58:48.161 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
-18:58:48.161 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
-18:58:48.162 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
-18:58:48.162 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
-18:58:48.162 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
-18:58:48.163 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
-18:58:48.316 [INFO] Exported transfers list to /ArcADSCM/MMO2/SB.00.01/transfersList.json
-18:58:48.317 [INFO] Duration: 2 second(s)
-18:58:48.345 [INFO] Running unitary compilation for 1 component(s)
-18:58:48.819 [INFO] Created Smart Compiler list MO2SB0001/SMARTCPL with 1 component(s) to compile:
-	- COU200 (RPG/*RPG)
-18:58:49.612 [INFO] Waiting for compilations to end...
-18:58:50.553 [INFO] 0 component(s) successfully compiled
-18:58:50.554 [INFO] Writing compilation logs
-18:58:50.565 [INFO] Writing 1 spooled file(s)
-18:58:50.592 [INFO] Writing 0 event file(s)
+14:03:10.936 [INFO] Preparing transfer operations
+14:03:11.497 [INFO] Created 11 transfer operation(s)
+14:03:11.633 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
+14:03:11.634 [INFO] Nothing to transfer to QRPGLESRC; all transfers were skipped.
+14:03:11.635 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
+14:03:11.635 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
+14:03:11.635 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
+14:03:11.636 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
+14:03:11.636 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
+14:03:11.637 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
+14:03:11.637 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
+14:03:11.637 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
+14:03:11.638 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
+14:03:11.819 [INFO] Exported transfers list to /ArcADSCM/MMO2/SB.00.02/transfersList.json
+14:03:11.819 [INFO] Duration: 1 second(s)
+14:03:11.831 [INFO] Preparing a full build using Macro-command *LIBL/BUILD
+14:03:11.847 [INFO] Running full build on version MMO2 DEV SB.00.02 using Macro-command *LIBL/BUILD
+14:03:13.711 [INFO] Macro-command BUILD instance 45 started.
+14:03:13.734 [INFO] Macro-command submitted in job 057850/ARCAD_PGMR/BUILD
+14:03:14.508 [INFO] Sequence 10: ACHGVAR VAR(WTGTRLS) VALUE('*CURRENT')
+14:03:14.509 [INFO] Sequence 20: AGETAPPVAR ENV(MMO2 *NONE *NONE) GRPVAR(ARCAD_STANDARD) GRPVAL(CHANGER) VAR(TGTRLS) TOVAR(WTGTRLS)
+14:03:14.510 [INFO] Sequence 30: ACHGVAR VAR(WBYPASS) VALUE('*NO')
+14:03:14.510 [INFO] Sequence 40: AGETAPPVAR ENV(MMO2 *NONE *NONE) GRPVAR(ARCAD_STANDARD) GRPVAL(CHANGER) VAR(BUILD_ALLOW_BYPASS) TOVAR(WBYPASS)
+14:03:14.510 [INFO] Sequence 50: ACHGVAR VAR(WSTATUS) VALUE('KO')
+14:03:14.511 [INFO] Sequence 60: ACHKLST LIST(MO2SB0002/LSTDLVSRC)
+14:03:14.512 [ERROR] [MSG0318]: List MO2SB0002/LSTDLVSRC does not exist.
+14:03:14.513 [INFO] Sequence 70: AIF COND((*IF MSG0318 *EQ MSG0318)) THEN(ACHGVAR VAR(PMODE) VALUE(*FULL) TYPE(*CHAR))
+14:03:14.514 [INFO] Sequence 80: ACHKVER APP(MMO2) ENV(DEV) VERSION(SB.00.02) AUT(*YES) ACTIVE(*YES) CHKVLD(*NO)
+14:03:14.514 [INFO] Sequence 90: AINZCURENV APP(MMO2) ENV(DEV) VERSION(SB.00.02)
+14:03:14.515 [INFO] Sequence 100: ACRTLST LIST(MO2SB0002/LSTSRCBLD) REPLACE(*YES) TEXT('List of sources to build')
+14:03:14.515 [INFO] Sequence 110: ACRTLST LIST(MO2SB0002/LSTXREF) REPLACE(*YES) TEXT('List of Xref compile')
+14:03:14.516 [INFO] Sequence 120: ACRTLST LIST(MO2SB0002/LSTBYPASS) REPLACE(*YES) TEXT('List of components that doesn''t compile')
+14:03:14.517 [INFO] Sequence 130: ACHKLST LIST(ARC_MO2LST/LSTBYPASS)
+14:03:14.517 [INFO] Sequence 140: ACRTREFLST APP(MMO2) FROMVERS(SB.00.02) TOVERS(*FROMVERS) LIBTYPE(*ENV) TOSRCLIST(MO2SB0002/LSTSRCBLD) TOOBJLIST(MO2SB0002/LSTOBJBLD) INCDLT(*YES) GENSTEP(*MAINT)
+14:03:14.518 [INFO] Sequence 140: ACRTREFLST APP(MMO2) FROMVERS(SB.00.02) TOVERS(*FROMVERS) LIBTYPE(*ENV) TOSRCLIST(MO2SB0002/LSTSRCBLD) TOOBJLIST(MO2SB0002/LSTOBJBLD) INCDLT(*YES) GENSTEP(*MAINT)
+14:03:14.519 [INFO] Sequence 150: AEXCSQL SQLSTM('update MO2SB0002/lstsrcbld s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                        where exis
+14:03:14.519 [INFO] Sequence 160: AEXTLST FROMLIST(MO2SB0002/LSTSRCBLD) TOLIST(MO2SB0002/LSTDELETE) RMVELEM(*YES) SELECT(*ALL *ALL () () *ALL *ALL *ALL *NONE *NONE *ALL H ())
+14:03:14.521 [INFO] Sequence 170: AINZLST LIST(MO2SB0002/LSTDELETE) UNHLDELEM(*YES)
+14:03:14.521 [INFO] Sequence 180: AIF COND((*IF *FULL *EQ '*DELTA')) THEN(ACALLSUBR SUBR(DELTA))
+14:03:14.522 [INFO] Sequence 190: ACHKLST LIST(MO2SB0002/LSTSRCBLD) CHKELEM(*YES)
+14:03:14.522 [INFO] Sequence 200: AEXTLST FROMLIST(MO2SB0002/LSTSRCBLD) TOLIST(MO2SB0002/LSTRCPL0) TOLISTTEXT('List of sources with object') EXPR('LST_JXLIB *NE '' ''')
+14:03:14.523 [INFO] Sequence 210: AEXTLST FROMLIST(MO2SB0002/LSTSRCBLD) TOLIST(MO2SB0002/LSTSRCCOPY) TOLISTTEXT('List of sources without object') EXPR('LST_JXLIB = '' ''')
+14:03:14.524 [INFO] Sequence 220: ACRTSXRLST REFTYPE(*INCLUDE) RTVSUBLVL(*YES) FROMREF(*LST) LNKTYPE(*COPYPGM) INCREFOBJ(*NO) LIST(MO2SB0002/LSTSRCCOPY) APP(MMO2) VERSLVL(*CURENV) TOLIST(MO2SB0002/LSTRCPLCPY) CHKVERCPL(*YES) USEAPPLNK(*NONE)
+14:03:14.524 [INFO] Sequence 230: AEXTLST FROMLIST(MO2SB0002/LSTRCPLCPY) TOLIST(*NONE) RMVELEM(*YES) SELECT(*ALL *ALL () () *ALL *ALL *ALL *NONE *NONE *ALL H ())
+14:03:14.525 [INFO] Sequence 240: AEXCSQL SQLSTM('update MO2SB0002/LSTRCPLCPY s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                      where exist
+14:03:14.526 [INFO] Sequence 250: AEXCSQL SQLSTM(' delete   from MO2SB0002/LSTRCPLCPY x   where  exists  (select lst_ctype from MO2SB0002/lstsrcbld s  where  s.LST_CZSEL7 = x.LST_CZSEL7 and s.lst_jobj = x.lst_jobj  and s.lst_ctype <> x.lst_ctype)')
+14:03:14.526 [INFO] Sequence 260: AEXCSQL SQLSTM('delete   from MO2SB0002/LSTRCPLCPY           WHERE LST_JXLIB = '' ''')
+14:03:14.527 [INFO] Sequence 270: ACALLSUBR SUBR(CPL1)
+14:03:14.527 [INFO] Sequence 390: AEXTLST FROMLIST(MO2SB0002/LSTRCPL0) TOLIST(MO2SB0002/LSTRCPL1) TOLISTTEXT('List of source for *FILE') EXPR('LST_NORD *LE 7')
+14:03:14.528 [INFO] Sequence 400: AEXTLST FROMLIST(MO2SB0002/LSTRCPL1) TOLIST(*NONE) RMVELEM(*YES) EXPR('LST_CTYPE *CT ''*''')
+14:03:14.528 [INFO] Sequence 420: ACHGVAR VAR(WLSTCPL) VALUE(LSTRCPL1)
+14:03:14.529 [INFO] Sequence 430: ACPLOBJ OBJ(*LST) LIST(MO2SB0002/LSTRCPL1) SRCLIB(*LIBL) ORDLIST(*YES) MODE(*INTER) XREFLIST(*YES) TOLIST(*CURENV/LSTXREF) CPLMOD1DEP(*NO) TGTRLS(*CURRENT) EVENTF(*EVENTF)
+14:03:15.816 [WARN] [MSG2218]: No processing, list LSTRCPL1 in library MO2SB0002 is empty.
+14:03:15.817 [WARN] [MSG0201]: No element in list MO2SB0002/LSTRCPL1.
+14:03:15.817 [WARN] [MSG0233]: ---> BUILD/0430: executed, warning issued. ->
+14:03:15.817 [INFO] Sequence 440: AEXCSQL SQLSTM('update MO2SB0002/LSTXREF s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                         where exist
+14:03:15.818 [INFO] Sequence 450: AEXCSQL SQLSTM(' delete   from MO2SB0002/lstxref   x    where  exists  (select lst_ctype from MO2SB0002/lstsrcbld s  where  s.LST_CZSEL7 = x.LST_CZSEL7 and s.lst_jobj = x.lst_jobj  and s.lst_ctype <> x.lst_ctype)')
+14:03:15.819 [INFO] Sequence 280: ACALLSUBR SUBR(CPL2)
+14:03:15.819 [INFO] Sequence 470: AEXTLST FROMLIST(MO2SB0002/LSTRCPL0) TOLIST(MO2SB0002/LSTRCPL2) TOLISTTEXT('List of source for order 8-11 (... *MODULE)') EXPR('LST_NORD *GE 8 *and LST_NORD *LE 11')
+14:03:15.820 [INFO] Sequence 480: AEXTLST FROMLIST(MO2SB0002/LSTRCPLCPY) TOLIST(MO2SB0002/LSTRCPL2) OPTION(*ADD) EXPR('LST_NORD *GE 8 *and LST_NORD *LE 11')
+14:03:15.820 [INFO] Sequence 490: AEXTLST FROMLIST(MO2SB0002/LSTXREF) TOLIST(MO2SB0002/LSTRCPL2) OPTION(*ADD) EXPR('LST_NORD *GE 8 *and LST_NORD *LE 11')
+14:03:15.820 [INFO] Sequence 500: AEXTLST FROMLIST(MO2SB0002/LSTRCPL2) TOLIST(*NONE) RMVELEM(*YES) EXPR('LST_CTYPE *CT ''*''')
+14:03:15.821 [INFO] Sequence 510: AUPDLST LIST(MO2SB0002/LSTRCPL2)
+14:03:15.821 [INFO] Sequence 520: AINZLST LIST(MO2SB0002/LSTRCPL2) STATUS('H') FROMLIST(MO2SB0002/LSTDELETE)
+14:03:15.822 [INFO] Sequence 530: ACHGVAR VAR(WLSTCPL) VALUE(LSTRCPL2)
+14:03:15.822 [INFO] Sequence 540: ACPLOBJ OBJ(*LST) LIST(MO2SB0002/LSTRCPL2) SRCLIB(*LIBL) MODE(*INTER) XREFLIST(*YES) TOLIST(*CURENV/LSTXREF) CPLMOD1DEP(*NO) TGTRLS(*CURRENT) EVENTF(*EVENTF)
+14:03:15.822 [WARN] [MSG0201]: No element in list MO2SB0002/LSTRCPL2.
+14:03:15.822 [WARN] [MSG0233]: ---> BUILD/0540: executed, warning issued. ->
+14:03:15.823 [INFO] Sequence 550: AEXCSQL SQLSTM('update MO2SB0002/LSTXREF s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                         where exist
+14:03:15.823 [INFO] Sequence 560: AEXCSQL SQLSTM(' delete   from MO2SB0002/lstxref   x    where  exists (select lst_ctype from MO2SB0002/lstsrcbld s  where  s.LST_CZSEL7 = x.LST_CZSEL7 and s.lst_jobj = x.lst_jobj  and s.lst_ctype <> x.lst_ctype)')
+14:03:15.824 [INFO] Sequence 290: ACALLSUBR SUBR(CPL3)
+14:03:15.824 [INFO] Sequence 580: AEXTLST FROMLIST(MO2SB0002/LSTRCPL0) TOLIST(MO2SB0002/LSTRCPL3) TOLISTTEXT('List of source for order 12 (*SRVPGM)') EXPR('LST_NORD *EQ 12')
+14:03:15.824 [INFO] Sequence 590: AEXTLST FROMLIST(MO2SB0002/LSTXREF) TOLIST(MO2SB0002/LSTRCPL3) OPTION(*ADD) EXPR('LST_NORD *EQ 12')
+14:03:15.825 [INFO] Sequence 600: AEXTLST FROMLIST(MO2SB0002/LSTRCPL3) TOLIST(*NONE) RMVELEM(*YES) EXPR('LST_CTYPE *CT ''*''')
+14:03:15.825 [INFO] Sequence 610: AUPDLST LIST(MO2SB0002/LSTRCPL3)
+14:03:15.826 [INFO] Sequence 620: AINZLST LIST(MO2SB0002/LSTRCPL3) STATUS('H') FROMLIST(MO2SB0002/LSTDELETE)
+14:03:15.826 [INFO] Sequence 630: ACHGVAR VAR(WLSTCPL) VALUE(LSTRCPL3)
+14:03:15.827 [INFO] Sequence 640: ACPLOBJ OBJ(*LST) LIST(MO2SB0002/LSTRCPL3) SRCLIB(*LIBL) MODE(*INTER) XREFLIST(*NO) TOLIST(*CURENV/LSTXREF) TGTRLS(*CURRENT) EVENTF(*EVENTF)
+14:03:15.827 [WARN] [MSG0201]: No element in list MO2SB0002/LSTRCPL3.
+14:03:15.827 [WARN] [MSG0233]: ---> BUILD/0640: executed, warning issued. ->
+14:03:15.827 [INFO] Sequence 650: AADJLSTORD LIST(MO2SB0002/LSTRCPL3) SRCLIB(*LIBL) FILE(*NO) SRVPGM(*YES)
+14:03:15.828 [INFO] Sequence 660: ACPLOBJ OBJ(*LST) LIST(MO2SB0002/LSTRCPL3) SRCLIB(*LIBL) MODE(*INTER) XREFLIST(*YES) TOLIST(*CURENV/LSTXREF) TGTRLS(*CURRENT) EVENTF(*EVENTF)
+14:03:15.828 [WARN] [MSG0201]: No element in list MO2SB0002/LSTRCPL3.
+14:03:15.828 [WARN] [MSG0233]: ---> BUILD/0660: executed, warning issued. ->
+14:03:15.829 [INFO] Sequence 670: AEXCSQL SQLSTM('update MO2SB0002/LSTXREF s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                         where exist
+14:03:15.829 [INFO] Sequence 680: AEXCSQL SQLSTM(' delete   from MO2SB0002/lstxref   x    where  exists  (select lst_ctype from MO2SB0002/lstsrcbld s  where  s.LST_CZSEL7 = x.LST_CZSEL7 and s.lst_jobj = x.lst_jobj  and s.lst_ctype <> x.lst_ctype)')
+14:03:15.830 [INFO] Sequence 300: ACALLSUBR SUBR(CPL4)
+14:03:15.830 [INFO] Sequence 700: AEXTLST FROMLIST(MO2SB0002/LSTRCPL0) TOLIST(MO2SB0002/LSTRCPL4) TOLISTTEXT('List of sources of order 13-xx(... *PGM)') EXPR('LST_NORD *GE 13')
+14:03:17.116 [INFO] Sequence 710: AEXTLST FROMLIST(MO2SB0002/LSTRCPLCPY) TOLIST(MO2SB0002/LSTRCPL4) OPTION(*ADD) EXPR('LST_NORD *GE 13')
+14:03:17.116 [INFO] Sequence 720: AEXTLST FROMLIST(MO2SB0002/LSTXREF) TOLIST(MO2SB0002/LSTRCPL4) OPTION(*ADD) EXPR('LST_NORD *GE 13')
+14:03:17.117 [INFO] Sequence 730: AEXTLST FROMLIST(MO2SB0002/LSTRCPL4) TOLIST(*NONE) RMVELEM(*YES) EXPR('LST_CTYPE *CT ''*''')
+14:03:17.117 [INFO] Sequence 740: AUPDLST LIST(MO2SB0002/LSTRCPL4)
+14:03:17.118 [INFO] Sequence 750: AINZLST LIST(MO2SB0002/LSTRCPL4) STATUS('H') FROMLIST(MO2SB0002/LSTDELETE)
+14:03:17.118 [INFO] Sequence 760: ACHGVAR VAR(WLSTCPL) VALUE(LSTRCPL4)
+14:03:17.118 [INFO] Sequence 770: ACPLOBJ OBJ(*LST) LIST(MO2SB0002/LSTRCPL4) SRCLIB(*LIBL) MODE(*INTER) XREFLIST(*YES) TOLIST(*CURENV/LSTXREF) TGTRLS(*CURRENT) EVENTF(*EVENTF)
+14:03:17.119 [INFO] Sequence 770: CRTBNDCL     PGM(MO2SB0002/ORD100C) SRCFILE(MO2SB0002/QCLSRC) REPLACE(*YES) TGTRLS(V7R4M0) OPTION(*EVENTF)
+14:03:17.120 [INFO] Sequence 310: AEXCLST LIST(MO2SB0002/LSTBYPASS) CMD(AHLDLSTE OBJ($LLIB/$LOBJ) TYPE($LTYPE) FROMLIST(MO2SB0002/LSTXREF))
+14:03:17.124 [INFO] Sequence 320: /* */
+14:03:18.421 [INFO] Sequence 330: ACRTVERLST APP(MMO2) ENV(DEV) VERSION(SB.00.02) CHKRCPL(*ABN) CHKMRG(*NOCTL) CHKLNKAPP(*ATTN) CHKSIGNAT(*ALL) SRCLIST(MO2SB0002/LSTSRC) CPLLIST(MO2SB0002/LSTRCPL) CHGOBJLIST(MO2SB0002/LSTCHGOBJ) OBJLIST(MO2SB0002/LSTOBJ) RMVLIST(MO2SB0002/LSTRMV) VER
+14:03:20.807 [WARN] [MSG1197]: *********** Version control diagnostic - beginning **********
+14:03:20.808 [WARN] [MSG0594]: . Several simultaneous changes for the object/member ORD100C, type CLLE.
+14:03:20.808 [WARN] [MSG0168]: List MO2SB0002/LSTSRC created. 1 record(s).
+14:03:20.808 [WARN] [MSG0168]: List MO2SB0002/LSTRMV created. 0 record(s).
+14:03:20.808 [WARN] [MSG0168]: List MO2SB0002/LSTRCPL created. 1 record(s).
+14:03:20.808 [WARN] [MSG0168]: List MO2SB0002/LSTCHGOBJ created. 0 record(s).
+14:03:20.809 [WARN] [MSG0168]: List MO2SB0002/LSTOBJ created. 1 record(s).
+14:03:20.809 [WARN] [MSG0168]: List MO2SB0002/LSTVERCPL created. 0 record(s).
+14:03:20.809 [WARN] [CPF4123]: Open options ignored for shared open of member AARTLSTF1.
+14:03:20.809 [WARN] [MSG0318]: List QTEMP/ZLSTFDBR does not exist.
+14:03:20.810 [WARN] [MSG0569]: List QTEMP/ZLSTFDBR created.
+14:03:20.810 [WARN] [MSG4260]: Ordering of *SRVPGM skipped due to use of *DBLCPL value in variable ACPLOBJ_ILESRVPGM_RESOLVE_REFERENCE for application MMO2.
+14:03:20.810 [WARN] [MSG2197]: No ranking changes of component(s) required for list LSTRCPL in library MO2SB0002
+14:03:20.810 [WARN] [MSG1198]: *********** Version control diagnostic - end **********
+14:03:20.811 [WARN] [MSG0788]: At least one warning issued for the version SB.00.02.
+14:03:20.811 [WARN] [MSG0233]: ---> BUILD/0330: executed, warning issued. ->
+14:03:20.811 [INFO] Sequence 340: ACHGVAR VAR(WSTATUS) VALUE(OK)
+14:03:20.812 [INFO] Sequence 350: /* */
+14:03:20.812 [INFO] Sequence 360: AEXCLST LIST(MO2SB0002/LSTSRCBLD) CMD(ACHKOBJIN OBJ($LOBJ) TYPE($LTYPE)) MONMSG(MSG1244 MSG1307)
+14:03:20.813 [INFO] Sequence 370: AIF COND((*IF OK *NE 'OK')) THEN(ACALLSUBR SUBR(ERROR))
+14:03:21.481 [INFO] Job 057850/ARCAD_PGMR/BUILD ended normally
+14:03:21.483 [INFO] Version MMO2 DEV SB.00.02 build is successful.
+14:03:22.016 [INFO] 1 component(s) successfully compiled
+14:03:22.018 [INFO] Writing compilation logs
+14:03:22.081 [INFO] Writing 2 spooled file(s)
+14:03:22.467 [INFO] Writing 1 event file(s)
