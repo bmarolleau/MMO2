@@ -1,6 +1,6 @@
       *%METADATA                                                                          *
-      * %TEXT Functions Country                                                           *
-      *%EMETADATA                                                                         *
+      * %TEXT Functions Country Demo                                                           *
+      *%EMETADATA                                                                          *
      h nomain
 
      FCOUNTRY   if   e           k disk    usropn
