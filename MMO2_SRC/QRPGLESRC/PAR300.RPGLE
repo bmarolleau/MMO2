@@ -1,109 +1,97 @@
-      *%METADATA                                                                          *
-      * %TEXT Parameters functions                                                        *
-      *%EMETADATA                                                                         *
-     h nomain
+**FREE
+//%METADATA                                                                          *
+// %TEXT Parameters functions                                                        *
+//%EMETADATA                                                                         *
+Ctl-Opt nomain;
 
-     FPARAMETER if   e           k disk    usropn
+Dcl-F PARAMETER  Keyed usropn;
 
-      /COPY ../QPROTOSRC/PARAMETER.RPGLE
+/COPY ../QPROTOSRC/PARAMETER.RPGLE
 
-     d chainPARAMETER  pr
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
+Dcl-Pr chainPARAMETER;
+  P_PACODE        Char(10)        value;
+  P_PASUBCODE     Char(10)        value;
+End-Pr;
 
-     D K_PACODE        S                   LIKE(PACODE)
-     D K_PASUBCODE     S                   LIKE(PASUBCODE)
+Dcl-S K_PACODE        LIKE(PACODE);
+Dcl-S K_PASUBCODE     LIKE(PASUBCODE);
 
-     C     kf            klist
-     C                   KFLD                    K_PACODE
-     C                   KFLD                    K_PASUBCODE
+//=============================================
+Dcl-Proc GetPARM1 export;
+  Dcl-Pi GetPARM1 Char(10);
+    P_PACODE        Char(10)        value;
+    P_PASUBCODE     Char(10)        value;
+  End-Pi;
+  chainPARAMETER(P_PACODE
+        :P_PASUBCODE);
 
-      *=============================================
-     PGetPARM1         B                     export
-     DGetPARM1         PI            10A
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
-      /free
-         chainPARAMETER(P_PACODE
-               :P_PASUBCODE);
+  return PARM1;
+End-Proc GetPARM1;
+//=============================================
+Dcl-Proc GetPARM2 export;
+  Dcl-Pi GetPARM2 Char(100);
+    P_PACODE        Char(10)        value;
+    P_PASUBCODE     Char(10)        value;
+  End-Pi;
+  chainPARAMETER(P_PACODE
+        :P_PASUBCODE);
 
-         return PARM1;
-      /end-free
-     pGetPARM1         e
-      *=============================================
-     PGetPARM2         B                     export
-     DGetPARM2         PI           100A
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
-      /free
-         chainPARAMETER(P_PACODE
-               :P_PASUBCODE);
+  return PARM2;
+End-Proc GetPARM2;
+//=============================================
+Dcl-Proc GetPARM3 export;
+  Dcl-Pi GetPARM3 Char(2);
+    P_PACODE        Char(10)        value;
+    P_PASUBCODE     Char(10)        value;
+  End-Pi;
+  chainPARAMETER(P_PACODE
+        :P_PASUBCODE);
 
-         return PARM2;
-      /end-free
-     pGetPARM2         e
-      *=============================================
-     PGetPARM3         B                     export
-     DGetPARM3         PI             2A
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
-      /free
-         chainPARAMETER(P_PACODE
-               :P_PASUBCODE);
+  return PARM3;
+End-Proc GetPARM3;
+//=============================================
+Dcl-Proc GetPARM4 export;
+  Dcl-Pi GetPARM4 Packed(1:0);
+    P_PACODE        Char(10)        value;
+    P_PASUBCODE     Char(10)        value;
+  End-Pi;
+  chainPARAMETER(P_PACODE
+        :P_PASUBCODE);
 
-         return PARM3;
-      /end-free
-     pGetPARM3         e
-      *=============================================
-     PGetPARM4         B                     export
-     DGetPARM4         PI             1P 0
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
-      /free
-         chainPARAMETER(P_PACODE
-               :P_PASUBCODE);
+  return PARM4;
+End-Proc GetPARM4;
+//=============================================
+Dcl-Proc GetPARM5 export;
+  Dcl-Pi GetPARM5 Packed(3:0);
+    P_PACODE        Char(10)        value;
+    P_PASUBCODE     Char(10)        value;
+  End-Pi;
+  chainPARAMETER(P_PACODE
+        :P_PASUBCODE);
 
-         return PARM4;
-      /end-free
-     pGetPARM4         e
-      *=============================================
-     PGetPARM5         B                     export
-     DGetPARM5         PI             3P 0
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
-      /free
-         chainPARAMETER(P_PACODE
-               :P_PASUBCODE);
+  return PARM5;
+End-Proc GetPARM5;
 
-         return PARM5;
-      /end-free
-     pGetPARM5         e
+Dcl-Proc chainPARAMETER;
+  Dcl-Pi chainPARAMETER;
+    P_PACODE        Char(10)        value;
+    P_PASUBCODE     Char(10)        value;
+  End-Pi;
+ if not %open(PARAMETER);
+   open PARAMETER;
+ endif;
+  if P_PACODE <> PACODE
+    or P_PASUBCODE <> PASUBCODE;
+    K_PACODE =  P_PACODE;
+    K_PASUBCODE =  P_PASUBCODE;
+    clear *all FPARAM;
+    chain (K_PACODE : K_PASUBCODE) PARAMETER;
+  endif;
+End-Proc chainPARAMETER;
 
-     p chainPARAMETER  b
-     d chainPARAMETER  pi
-     D P_PACODE                      10A    value
-     D P_PASUBCODE                   10A    value
-      /free
-        if not %open(PARAMETER);
-          open PARAMETER;
-        endif;
-         if P_PACODE <> PACODE
-           or P_PASUBCODE <> PASUBCODE;
-           K_PACODE =  P_PACODE;
-           K_PASUBCODE =  P_PASUBCODE;
-           clear *all FPARAM;
-           chain kf PARAMETER;
-         endif;
-      /end-free
-     p chainPARAMETER  e
-
-     p closePARAMETER  b
-     d closePARAMETER  pi
-      /free
-        if %open(PARAMETER);
-          close PARAMETER;
-        endif;
-      /end-free
-     p closePARAMETER  e
-
-
+Dcl-Proc closePARAMETER;
+  Dcl-Pi closePARAMETER End-Pi;
+ if %open(PARAMETER);
+   close PARAMETER;
+ endif;
+End-Proc closePARAMETER;
