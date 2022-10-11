@@ -18,7 +18,7 @@
 
      D indds           ds
      D  help                   1      1n
-     D  exit                   3      3n
+     D  exit2                  3      3n
      D  prompt                 4      4n
      D  refresh                5      5n
      D  Create                 6      6n
@@ -145,7 +145,7 @@
        //--- Command Keys  -----------------------------------------------------
        begsr s01key;
          select;
-         when exit;
+         when exit2;
            panel  = 0;
            step01 = prp;
          when cancel;
@@ -262,7 +262,7 @@
        //--- command Keys  -----------------------------------------------------
        begsr S02key;
          select;
-         when exit;
+         when exit2;
            panel  = 1;
            step02 = prp;
          when cancel;
@@ -349,7 +349,7 @@
        //--- command Keys  -----------------------------------------------------
        begsr S03key;
          select;
-         when exit;
+         when exit2;
            panel  = 1;
            step03 = prp;
          when cancel;
