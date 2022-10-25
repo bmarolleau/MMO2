@@ -1,1 +1,1 @@
-Hello
+Demo App for Merlin demos (Arcad project, Arcad Builder)
