@@ -1,7 +1,7 @@
       *%METADATA                                                                          *
       * %TEXT Work with article                                                           *
       *%EMETADATA   
-      * Adding comments                                                                      *
+      * Adding comments v2                                                                     *
 
      h dftactgrp(*no) bnddir('SAMPLE')
 
