@@ -13,4 +13,6 @@
                   ORDATCLO       8  0       TEXT('CLOSE DATE')
                                             COLHDG('CLOSE' 'DATE')
                   ORDATCL1       8  0       TEXT('CLOSE DATE')
+                  ORDATCL2       8  0       TEXT('CLOSE DATE')
+              
 
