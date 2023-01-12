@@ -10,7 +10,7 @@
      F                                     indds(indds)
      F                                     sfile(sfl01:rrn01)
      F                                     Infds(Info)
-
+ 
       /COPY ../QPROTOSRC/FAMILLY.RPGLE
 
      d providers       pr                  extpgm('ART201')
