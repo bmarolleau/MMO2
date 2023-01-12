@@ -1,4 +1,7 @@
-12:01:13.145 [INFO] Connecting locally to instance AD/ENG.
-12:01:14.138 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.00 with CCSID 37
-12:01:14.684 [INFO] Starting project synchronization
-12:01:19.077 [ERROR] Command 'compile' failed: com.arcadsoftware.elias.commons.exceptions.EliasLinkedVersionNotFoundException: Linked version of application MMO2 not found for branch main
+09:15:43.996 [INFO] Connecting locally to instance AD/ENG.
+09:15:44.972 [INFO] Connected to Arcad Server instance AD/ENG version 22.02.14 with CCSID 37
+09:15:45.458 [INFO] Starting project synchronization
+09:15:48.171 [INFO] Linked version of application MMO2 not found for branch main
+09:15:50.786 [INFO] Cloning git repository to /ArcadIfsPrd/arcad_home/tmp/MMO26202330871533549296
+09:15:53.437 [INFO] Performing fetch on ref refs/heads/MAIN
+09:15:54.755 [ERROR] Command 'compile' failed: com.arcadsoftware.elias.commons.exceptions.EliasException: JGit operation failed: org.eclipse.jgit.api.errors.TransportException: Remote does not have refs/heads/MAIN available for fetch.

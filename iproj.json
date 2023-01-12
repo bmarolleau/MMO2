@@ -16,5 +16,5 @@
     }
   },
   "buildCommand": "elias compile {branch}",
-  "compileCommand": "elias compile {branch} -f {filename}"
+  "compileCommand": "elias compile {branch} -f {files}"
 }
